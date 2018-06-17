@@ -1,0 +1,21 @@
+<h2>Message List</h2>
+
+<button class="logout" (click)="onClickLogout()">Logout</button>
+<button class="update" (click)="onClickUpdate()">Update</button>
+
+<div class="send">
+    <form [formGroup]="sendForm" (ngSubmit)="onClickSubmit(sendForm.value)">
+      <label>Message: </label>
+      <input type="text" formControlName="message">
+      <button type="submit">Send</button>
+    </form>
+</div>
+
+  <ul class="messages">
+  <li *ngFor="let message of messages">
+      <span class="datetime">{{message.datetime}}</span>
+      <span class="from">{{message.from_name}}</span>
+      <span class="to">{{message.to_name}}</span>
+      <span class="message">{{message.message}}</span>
+  </li>
+</ul>

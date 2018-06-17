@@ -1,0 +1,9 @@
+<h2>confirm</h2>
+
+<div class="confirm">
+  <form [formGroup]="confirmForm" (ngSubmit)="onSubmitConfirm(confirmForm.value)">
+    <label>Confirmation Code: </label>
+    <input type="Code" formControlName="code">
+    <button type="submit">Confirm</button>
+  </form>
+</div>

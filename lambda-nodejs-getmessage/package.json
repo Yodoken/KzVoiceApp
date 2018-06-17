@@ -1,0 +1,16 @@
+{
+  "name": "lambda-nodejs-getmessage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "zip -r dist/lambda-getmessages.zip index.js node_modules",
+    "deploy": "aws lambda update-function-code --function-name GetMessages --zip-file fileb://./dist/lambda-getmessages.zip",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^7.4.3"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "lambda-nodejs-postmessage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "zip -r dist/lambda-postmessage.zip index.js node_modules",
+    "deploy": "aws lambda update-function-code --function-name PostMessage --zip-file fileb://./dist/lambda-postmessage.zip",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kengo Yodogawa",
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^7.4.3"
+  }
+}
